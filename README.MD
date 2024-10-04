@@ -1,4 +1,4 @@
-# Sistema Core para desarrollo de apps
+# Bingo en escala de 90 por defecto
 
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg) 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
