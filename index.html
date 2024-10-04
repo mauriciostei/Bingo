@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./scripts.js"></script>
+</head>
+<body>
+
+    <div class="flex flex-row justify-between items-center h-screen gap-3 divide-x-2">
+        <article class="w-1/4 p-5 h-full flex flex-col gap-5">
+
+            <p class="text-3xl text-center font-bold h-1/4">Ultimo Numero:</p>
+            <p class="text-9xl text-green-800 font-bold text-center drop-shadow-xl grow" id="currentNumber">0</p>
+
+            <p id="status" class="text-3xl text-center font-bold drop-shadow-xl">Sin Iniciar</p>
+            <button class="bg-red-300 text-xl p-3 rounded shadow" onclick="resetGame()">Reiniciar Juego</button>
+            <button class="bg-orange-300 text-xl p-3 rounded shadow" onclick="pauseGame()">Pausar Juego</button>
+            <button class="bg-green-300 text-xl p-3 rounded shadow" onclick="resumeGame()">Reanudar Numero</button>
+
+
+            <div class="flex flex-row justify-between items-center gap-3">
+                <label class="flex flex-col w-full">
+                    <span class="text-sm">
+                        Tiempo entre números (segundos):
+                    </span>
+                    <input type="number" id="timer" class="p-3 rounded shadow ring ring-slate-200" value="5">
+                </label>
+                
+                <label class="flex flex-col w-full">
+                    <span class="text-sm">
+                        Numero de opciones a ser utilizadas
+                    </span>
+                    <input type="number" id="options" class="p-3 rounded shadow ring ring-slate-200" value="90">
+                </label>
+            </div>
+        </article>
+
+        <article class="w-3/4 p-5 h-full flex flex-col gap-5">
+            <p class="text-xl text-center mb-3">Números Tomados:</p>
+
+            <div class="text-3xl font-bold grid grid-cols-7 gap-5 drop-shadow-xl grow" id="numbersTaken"></div>
+
+            <label class="text-xl">
+                Mostrar resultados de forma ordenada:
+                <input type="checkbox" onchange="changeSort()">
+            </label>
+        </article>
+    </div>
+    
+
+</body>
+</html>
